@@ -1,0 +1,19 @@
+{
+  "overview": "A real-time UV Index display app for Ludwigsburg, Germany. Shows the current UV level with color-coded risk category, sun protection recommendations, and an hourly forecast for the day.",
+  "features": [
+    "Current UV Index with color-coded risk level",
+    "Sun protection recommendations based on UV level",
+    "12-hour hourly UV forecast",
+    "Auto-refresh every 30 minutes with manual refresh",
+    "Safe outdoor time estimates"
+  ],
+  "category": "tool",
+  "tags": [
+    "uv-index",
+    "weather",
+    "sun-safety",
+    "ludwigsburg",
+    "health"
+  ],
+  "last_updated": "2026-04-07T20:42:23.457Z"
+}

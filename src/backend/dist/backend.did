@@ -1,0 +1,41 @@
+type http_request_result = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type http_header = 
+ record {
+   name: text;
+   value: text;
+ };
+type UVData = 
+ record {
+   currentRiskLevel: text;
+   currentUVIndex: float64;
+   hourlyForecast: vec HourlyForecastEntry;
+   lastUpdated: text;
+ };
+type TransformationOutput = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type TransformationInput = 
+ record {
+   context: blob;
+   response: http_request_result;
+ };
+type HourlyForecastEntry = 
+ record {
+   time: text;
+   uvIndex: float64;
+ };
+service : {
+  getUVData: () -> (variant {
+                      err: text;
+                      ok: UVData;
+                    });
+  transform: (input: TransformationInput) -> (TransformationOutput) query;
+}

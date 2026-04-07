@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "DM Sans";
+    --font-body: "DM Sans";
+    --font-mono: "JetBrains Mono";
+    --radius: 0.5rem;
+
+    --background: 0.98 0 0;
+    --foreground: 0.15 0 0;
+    --card: 1.0 0 0;
+    --card-foreground: 0.15 0 0;
+    --popover: 1.0 0 0;
+    --popover-foreground: 0.15 0 0;
+
+    --primary: 0.55 0.19 251;
+    --primary-foreground: 0.98 0 0;
+
+    --secondary: 0.88 0.12 242;
+    --secondary-foreground: 0.25 0 0;
+    --muted: 0.92 0 0;
+    --muted-foreground: 0.45 0 0;
+
+    --accent: 0.63 0.21 262;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.9 0 0;
+    --input: 0.94 0 0;
+    --ring: 0.63 0.21 262;
+
+    --chart-1: 0.62 0.22 142;
+    --chart-2: 0.57 0.22 56;
+    --chart-3: 0.65 0.22 40;
+    --chart-4: 0.45 0.22 25;
+    --chart-5: 0.35 0.22 25;
+
+    /* UV risk scale tokens */
+    --uv-low-bg: oklch(0.95 0.05 142);
+    --uv-low-text: oklch(0.4 0.14 142);
+    --uv-low-border: oklch(0.82 0.12 142);
+    --uv-low-accent: oklch(0.55 0.19 142);
+
+    --uv-moderate-bg: oklch(0.97 0.06 90);
+    --uv-moderate-text: oklch(0.5 0.17 90);
+    --uv-moderate-border: oklch(0.88 0.14 90);
+    --uv-moderate-accent: oklch(0.65 0.22 90);
+
+    --uv-high-bg: oklch(0.96 0.06 50);
+    --uv-high-text: oklch(0.48 0.18 50);
+    --uv-high-border: oklch(0.84 0.14 50);
+    --uv-high-accent: oklch(0.62 0.22 50);
+
+    --uv-veryhigh-bg: oklch(0.96 0.06 25);
+    --uv-veryhigh-text: oklch(0.45 0.2 25);
+    --uv-veryhigh-border: oklch(0.82 0.16 25);
+    --uv-veryhigh-accent: oklch(0.55 0.22 25);
+
+    --uv-extreme-bg: oklch(0.95 0.06 300);
+    --uv-extreme-text: oklch(0.42 0.2 300);
+    --uv-extreme-border: oklch(0.8 0.14 300);
+    --uv-extreme-accent: oklch(0.52 0.22 300);
+
+    --sidebar: 0.98 0 0;
+    --sidebar-foreground: 0.15 0 0;
+    --sidebar-primary: 0.55 0.19 251;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.92 0 0;
+    --sidebar-accent-foreground: 0.25 0 0;
+    --sidebar-border: 0.9 0 0;
+    --sidebar-ring: 0.63 0.21 262;
+  }
+
+  .dark {
+    --background: 0.12 0 0;
+    --foreground: 0.95 0 0;
+    --card: 0.16 0 0;
+    --card-foreground: 0.95 0 0;
+    --popover: 0.22 0 0;
+    --popover-foreground: 0.95 0 0;
+
+    --primary: 0.72 0.18 262;
+    --primary-foreground: 0.12 0 0;
+
+    --secondary: 0.25 0.08 242;
+    --secondary-foreground: 0.88 0 0;
+    --muted: 0.22 0 0;
+    --muted-foreground: 0.55 0 0;
+
+    --accent: 0.75 0.19 262;
+    --accent-foreground: 0.12 0 0;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.12 0 0;
+
+    --border: 0.25 0 0;
+    --input: 0.2 0 0;
+    --ring: 0.75 0.19 262;
+
+    --chart-1: 0.68 0.2 142;
+    --chart-2: 0.65 0.2 56;
+    --chart-3: 0.72 0.2 40;
+    --chart-4: 0.58 0.2 25;
+    --chart-5: 0.48 0.2 25;
+
+    /* UV risk scale tokens (dark) */
+    --uv-low-bg: oklch(0.2 0.05 142);
+    --uv-low-text: oklch(0.75 0.14 142);
+    --uv-low-border: oklch(0.32 0.1 142);
+    --uv-low-accent: oklch(0.68 0.19 142);
+
+    --uv-moderate-bg: oklch(0.2 0.05 90);
+    --uv-moderate-text: oklch(0.78 0.16 90);
+    --uv-moderate-border: oklch(0.32 0.1 90);
+    --uv-moderate-accent: oklch(0.72 0.22 90);
+
+    --uv-high-bg: oklch(0.2 0.05 50);
+    --uv-high-text: oklch(0.76 0.16 50);
+    --uv-high-border: oklch(0.32 0.1 50);
+    --uv-high-accent: oklch(0.7 0.22 50);
+
+    --uv-veryhigh-bg: oklch(0.2 0.06 25);
+    --uv-veryhigh-text: oklch(0.74 0.18 25);
+    --uv-veryhigh-border: oklch(0.32 0.1 25);
+    --uv-veryhigh-accent: oklch(0.68 0.22 25);
+
+    --uv-extreme-bg: oklch(0.2 0.06 300);
+    --uv-extreme-text: oklch(0.72 0.18 300);
+    --uv-extreme-border: oklch(0.32 0.1 300);
+    --uv-extreme-accent: oklch(0.65 0.22 300);
+
+    --sidebar: 0.16 0 0;
+    --sidebar-foreground: 0.95 0 0;
+    --sidebar-primary: 0.72 0.18 262;
+    --sidebar-primary-foreground: 0.12 0 0;
+    --sidebar-accent: 0.25 0 0;
+    --sidebar-accent-foreground: 0.88 0 0;
+    --sidebar-border: 0.25 0 0;
+    --sidebar-ring: 0.75 0.19 262;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* UV scale utility classes */
+  .uv-safe {
+    background-color: var(--uv-low-bg);
+    color: var(--uv-low-text);
+  }
+  .uv-low {
+    background-color: var(--uv-moderate-bg);
+    color: var(--uv-moderate-text);
+  }
+  .uv-moderate {
+    background-color: var(--uv-high-bg);
+    color: var(--uv-high-text);
+  }
+  .uv-high {
+    background-color: var(--uv-veryhigh-bg);
+    color: var(--uv-veryhigh-text);
+  }
+  .uv-extreme {
+    background-color: var(--uv-extreme-bg);
+    color: var(--uv-extreme-text);
+  }
+
+  /* UV indicator badges */
+  .uv-badge-safe {
+    @apply inline-block px-3 py-1 rounded-full text-sm font-medium;
+    background-color: var(--uv-low-bg);
+    color: var(--uv-low-text);
+    border: 1px solid var(--uv-low-border);
+  }
+  .uv-badge-low {
+    @apply inline-block px-3 py-1 rounded-full text-sm font-medium;
+    background-color: var(--uv-moderate-bg);
+    color: var(--uv-moderate-text);
+    border: 1px solid var(--uv-moderate-border);
+  }
+  .uv-badge-moderate {
+    @apply inline-block px-3 py-1 rounded-full text-sm font-medium;
+    background-color: var(--uv-high-bg);
+    color: var(--uv-high-text);
+    border: 1px solid var(--uv-high-border);
+  }
+  .uv-badge-high {
+    @apply inline-block px-3 py-1 rounded-full text-sm font-medium;
+    background-color: var(--uv-veryhigh-bg);
+    color: var(--uv-veryhigh-text);
+    border: 1px solid var(--uv-veryhigh-border);
+  }
+  .uv-badge-extreme {
+    @apply inline-block px-3 py-1 rounded-full text-sm font-medium;
+    background-color: var(--uv-extreme-bg);
+    color: var(--uv-extreme-text);
+    border: 1px solid var(--uv-extreme-border);
+  }
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+  font-display: swap;
+}
